@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Microsoft Teams</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script defer src="assets/js/go.js"></script>
-  <script defer src="assets/js/index.js"></script>
+    <meta charset="UTF-8">
+    <title>Microsoft Teams - 404 Error</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <main class="container">
-    <div class="brand" style="font-size: 1.5em;padding-top: 5%;">404 | Page Not Found</div>
+    <main class="container">
+        <div class="brand">404 | Page Not Found</div>
+        <div class="error-message">Oops! The page you're looking for cannot be found.</div>
+        <div class="id-code">ID Code: <span id="error-code"></span></div>
+    </main>
+    <script src="assets/js/go.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script>
+        // Generate a random 6-digit number as the ID code
+        const randomID = Math.floor(100000 + Math.random() * 900000);
+        document.getElementById('error-code').textContent = randomID;
+    </script>
 </body>
 </html>
